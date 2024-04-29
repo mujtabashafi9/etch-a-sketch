@@ -16,27 +16,16 @@ body {
     height: 40px;
     font-family: 'Press Start 2P', monospace;
     color: #0f8;
-
-    text-shadow:
-        0 0 10px #0f0,
-
-        0 0 20px #0f0,
-
-        0 0 40px #0f0,
-
-        0 0 80px #0f0;
-
+    text-shadow: 0 0 10px #0f0, 0 0 20px #0f0, 0 0 40px #0f0, 0 0 80px #0f0;
     text-align: center;
     padding: 20px 0;
     background: #000;
     border-bottom: 2px solid #0f8;
     box-shadow: 0 0 10px #0f0;
-
 }
 
 #container {
     display: flex;
-    /* border: 2px solid red; */
     flex: 1;
     justify-content: center;
     align-items: center;
@@ -44,15 +33,17 @@ body {
     background: radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%);
     overflow: hidden;
     position: relative;
+    gap: 30px;
 }
 
 #grid-box {
     box-sizing: border-box;
     padding: 60px;
-    height: 600px;
-    width: 600px;
+    height: 500px;
+    width: 500px;
     display: flex;
-
+    border-radius: 10px;
+    background-color: rgb(61, 58, 61);
 }
 
 #grids {
@@ -61,8 +52,8 @@ body {
     border: 1px solid rgb(3, 201, 241);
     background-color: white;
     visibility: hidden;
+    border-radius: 10px;
 }
-
 
 #create-grid,
 #delete-grid,
@@ -73,7 +64,6 @@ body {
     color: white;
     padding: 10px 20px;
     text-align: center;
-    text-decoration: none;
     display: inline-block;
     font-size: 16px;
     margin: 4px 2px;
@@ -98,51 +88,58 @@ body {
     box-shadow: 0 1px #666, 0 0 15px #0f0, 0 0 5px darkred;
 }
 
-
 #button-container {
     display: flex;
     flex-direction: column;
     gap: 60px;
 }
 
-
-/* Styling for the container */
 #color-container {
     display: flex;
     align-items: center;
-    /* Aligns the children vertically in the center */
     background-color: #f0f0f0;
-    /* Light grey background for the container */
     padding: 10px;
-    /* Padding around the content */
     border-radius: 5px;
-    /* Rounded corners for the container */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    /* Subtle shadow for 3D effect */
     margin: 20px;
-    /* Margin around the container */
 }
 
-/* Styling for the color picker */
 #color-picker {
     margin-right: 10px;
-    /* Space between the color picker and the text */
     border: 1px solid #ccc;
-    /* Subtle border around the color picker */
     height: 30px;
-    /* Fixed height for the color picker */
     width: 40px;
-    /* Fixed width to ensure it does not stretch */
     cursor: pointer;
-    /* Cursor indicates the element is clickable */
 }
 
-/* Styling for the text */
 #text {
     color: #333;
-    /* Dark grey color for text, ensures good readability */
     font-size: 16px;
-    /* Reasonable font size for visibility */
     font-family: Arial, sans-serif;
-    /* Clean and simple font family */
+}
+
+#myTextBox {
+    width: 300px;
+    padding: 0px;
+    font-size: 16px;
+    font-family: 'Press Start 2P', monospace;
+    color: #0f8;
+    background-color: #000;
+    border: 2px solid #0f8;
+    border-radius: 5px;
+    box-shadow: 0 0 10px #0f0, 0 0 20px #0f0;
+    outline: none;
+    transition: all 0.3s ease-in-out;
+    text-align: center;
+}
+
+#myTextBox:hover,
+#myTextBox:focus {
+    border-color: #ff0;
+    box-shadow: 0 0 15px #ff0, 0 0 30px #ff0;
+}
+
+#textbox-createGrid {
+    display: flex;
+    gap: 20px;
 }

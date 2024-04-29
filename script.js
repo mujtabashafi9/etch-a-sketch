@@ -6,14 +6,15 @@ window.onload = () => {
         const grids = document.querySelector("#grids");
         let createGrid = document.querySelector("#create-grid");
         let removeGrid = document.querySelector("#remove-grid-color");
-        currentColor = colorPicker.value;
+        const getInput = document.querySelector("#myTextBox");
 
+        currentColor = colorPicker.value;
         colorPicker.addEventListener("change", () => {
             currentColor = colorPicker.value;
         });
 
         createGrid.addEventListener("click", () => {
-            let userInput = parseInt(prompt("State the size of your grid (1-100): "), 10);
+            let userInput = getInput.value;
             if (isNaN(userInput) || userInput <= 0 || userInput > 100) {
                 userInput = 16;
             }
